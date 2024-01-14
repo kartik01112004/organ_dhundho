@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062425087607",
+    "project_id": "organ-dhundho",
+    "storage_bucket": "organ-dhundho.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062425087607:android:156b6376c7643637474072",
+        "android_client_info": {
+          "package_name": "com.example.organ_dhundho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1YAxZ-C_lXopdhP5kf68AWZ0AEpFEDtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
