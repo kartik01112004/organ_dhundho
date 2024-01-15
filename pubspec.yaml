@@ -39,7 +39,6 @@ dependencies:
   firebase_auth:
   firebase_core:
   firebase_storage:
-  flutter_svg: ^2.0.5
   image_picker: ^0.8.7+4
   intl: ^0.18.1
   provider: ^6.0.5
@@ -49,6 +48,7 @@ dependencies:
   dotted_border:
   sweet_nav_bar: ^1.0.5
   blur: ^3.0.0
+  json_annotation:
 
 dev_dependencies:
   flutter_test:

@@ -27,7 +27,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
       context: parentContext,
       builder: (BuildContext context) {
         return SimpleDialog(
-          title: const Text('Create a Post'),
+          title: const Text('Post Requirement'),
           children: <Widget>[
             SimpleDialogOption(
                 padding: const EdgeInsets.all(20),
@@ -117,13 +117,30 @@ class _AddPostScreenState extends State<AddPostScreen> {
 
     return _file == null
         ? Scaffold(
-            body: Center(
-              child: IconButton(
-                icon: const Icon(
-                  Icons.upload,
-                ),
-                onPressed: () => _selectImage(context),
+            backgroundColor: mobileBackgroundColor,
+            appBar: AppBar(
+              backgroundColor: mobileBackgroundColor,
+              title: const Text(
+                "Request Blood/Organs",
+                style: TextStyle(color: Colors.green),
               ),
+            ),
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Add a reference Image",
+                  style: TextStyle(color: Colors.green, fontSize: 28),
+                ),
+                Center(
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.upload,
+                    ),
+                    onPressed: () => _selectImage(context),
+                  ),
+                ),
+              ],
             ),
           )
         : Scaffold(
@@ -135,6 +152,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
               ),
               title: const Text(
                 'Post to',
+                style: TextStyle(color: Colors.green),
               ),
               centerTitle: false,
               actions: <Widget>[
@@ -175,7 +193,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       child: TextField(
                         controller: _descriptionController,
                         decoration: const InputDecoration(
-                            hintText: "Write a caption...",
+                            hintText: "Discription of your requirements",
                             border: InputBorder.none),
                         maxLines: 8,
                       ),

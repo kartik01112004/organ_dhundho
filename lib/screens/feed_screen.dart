@@ -32,8 +32,8 @@ class _FeedScreenState extends State<FeedScreen> {
               backgroundColor: mobileBackgroundColor,
               centerTitle: false,
               title: const Text(
-                "Feed",
-                style: TextStyle(color: Color.fromARGB(255, 78, 18, 88)),
+                "Home Page",
+                style: TextStyle(color: Colors.green),
               ),
               actions: [
                 IconButton(

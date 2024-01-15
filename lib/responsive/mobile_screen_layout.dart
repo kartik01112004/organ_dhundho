@@ -38,14 +38,10 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
     pageController.jumpToPage(page);
   }
 
-  final iconLinearGradiant = List<Color>.from([
-    const Color.fromARGB(255, 235, 182, 241),
-    const Color.fromARGB(255, 235, 182, 241)
-  ]);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: mobileBackgroundColor,
       body: PageView(
         controller: pageController,
         onPageChanged: onPageChanged,
@@ -55,40 +51,31 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
         backgroundColor: mobileBackgroundColor,
         items: [
           SweetNavBarItem(
-            sweetIcon: Icon(
-              Icons.home,
-              color: (_page == 0) ? primaryColor : secondaryColor,
+            sweetIcon: const Icon(
+              FontAwesomeIcons.droplet,
             ),
-            iconColors: iconLinearGradiant,
             sweetLabel: '',
-            sweetBackground: const Color.fromARGB(255, 101, 20, 115),
           ),
           SweetNavBarItem(
-              sweetIcon: Icon(
-                FontAwesomeIcons.users ,
-                color: (_page == 1) ? primaryColor : secondaryColor,
-              ),
-              iconColors: iconLinearGradiant,
-              sweetLabel: '',
-              sweetBackground:  const Color.fromARGB(255, 101, 20, 115),),
-          
-          SweetNavBarItem(
-            sweetIcon: Icon(
-              FontAwesomeIcons.image,
-              color: (_page == 2) ? primaryColor : secondaryColor,
+            sweetIcon: const Icon(
+              FontAwesomeIcons.building,
+              color: secondaryColor,
             ),
-            iconColors: iconLinearGradiant,
             sweetLabel: '',
-            sweetBackground:  const Color.fromARGB(255, 101, 20, 115),
           ),
           SweetNavBarItem(
-            sweetIcon: Icon(
-              Icons.person,
-              color: (_page == 3) ? primaryColor : secondaryColor,
+            sweetIcon: const Icon(
+              FontAwesomeIcons.plus,
+              color: secondaryColor,
             ),
-            iconColors: iconLinearGradiant,
             sweetLabel: '',
-            sweetBackground:  const Color.fromARGB(255, 101, 20, 115),
+          ),
+          SweetNavBarItem(
+            sweetIcon: const Icon(
+              FontAwesomeIcons.person,
+              color: secondaryColor,
+            ),
+            sweetLabel: '',
           ),
         ],
         onTap: navigationTapped,

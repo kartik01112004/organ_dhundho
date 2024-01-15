@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../resources/auth_methods.dart';
 import '../resources/firestore_methods.dart';
-import '../screens/add_post_screen.dart';
 import '../screens/login_screen.dart';
 import '../utils/colors.dart';
 import '../utils/utils.dart';
@@ -76,15 +75,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AddPostScreen()));
-              },
-              shape: BeveledRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0)),
-              child: const Icon(Icons.add),
-            ),
+            backgroundColor: mobileBackgroundColor,
+            // floatingActionButton: FloatingActionButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(MaterialPageRoute(
+            //         builder: (context) => const AddPostScreen()));
+            //   },
+            //   child: const Icon(Icons.add),
+            // ),
             // appBar: AppBar(
             //   backgroundColor: mobileBackgroundColor,
             //   title: Text(
@@ -158,8 +156,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             widget.uid
                                         ? FollowButton(
                                             text: 'Sign Out',
-                                            backgroundColor:
-                                                mobileBackgroundColor,
+                                            backgroundColor: Color.fromARGB(
+                                                112, 242, 177, 251),
                                             textColor: primaryColor,
                                             borderColor: Colors.grey,
                                             function: () async {

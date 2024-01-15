@@ -19,19 +19,24 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: mobileBackgroundColor,
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
-        title: Form(
-          child: TextFormField(
-            controller: searchController,
-            decoration:
-                const InputDecoration(labelText: 'Search for a user...'),
-            onFieldSubmitted: (String _) {
-              setState(() {
-                isShowUsers = true;
-              });
-              print(_);
-            },
+        title: Container(
+          color: Colors.white,
+          child: Form(
+            child: TextFormField(
+              controller: searchController,
+              decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: '  Search for an organization...'),
+              onFieldSubmitted: (String _) {
+                setState(() {
+                  isShowUsers = true;
+                });
+                print(_);
+              },
+            ),
           ),
         ),
       ),

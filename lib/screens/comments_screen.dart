@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import '../models/user.dart';
@@ -54,7 +53,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
         elevation: 0,
         backgroundColor: mobileBackgroundColor,
         title: const Text(
-          'Comments',
+          'Interactions',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: false,

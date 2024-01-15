@@ -171,7 +171,7 @@ class _PostCardState extends State<PostCard> {
               });
             },
             child: Padding(
-              padding: EdgeInsets.only(left: width * 0.2),
+              padding: EdgeInsets.all(width * 0.05),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
                 child: Stack(
@@ -211,7 +211,7 @@ class _PostCardState extends State<PostCard> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: width * 0.2),
+            padding: EdgeInsets.only(left: width * 0.05),
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.only(
@@ -237,7 +237,7 @@ class _PostCardState extends State<PostCard> {
           ),
           // LIKE, COMMENT SECTION OF THE POST
           Padding(
-            padding: EdgeInsets.only(left: width * 0.2),
+            padding: EdgeInsets.only(left: width * 0.05),
             child: Row(
               children: <Widget>[
                 LikeAnimation(
@@ -294,6 +294,24 @@ class _PostCardState extends State<PostCard> {
                     ),
                   ),
                 ),
+                // Container(
+                //   padding: const EdgeInsets.symmetric(horizontal: 16),
+                //   child: Column(
+                //     mainAxisSize: MainAxisSize.min,
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: <Widget>[
+                //       DefaultTextStyle(
+                //           style: Theme.of(context)
+                //               .textTheme
+                //               .titleSmall!
+                //               .copyWith(fontWeight: FontWeight.w800),
+                //           child: Text(
+                //             '${widget.snap['comments'].length}',
+                //             style: Theme.of(context).textTheme.bodyMedium,
+                //           )),
+                //     ],
+                //   ),
+                // ),
                 // Row(
                 //   children: [
                 //     if(widget.snap['comments'])...[
